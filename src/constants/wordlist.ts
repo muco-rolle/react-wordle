@@ -54,4 +54,5 @@ export const WORDS = [
   'INSYO',
   'INGWE',
   'HEPFO',
+  'ISOKO',
 ]
