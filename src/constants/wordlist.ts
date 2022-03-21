@@ -60,4 +60,6 @@ export const WORDS = [
   'ITABI',
   'IMANA',
   'INAMA'
+  'IMIBU',
+  'UMUBU',
 ]
