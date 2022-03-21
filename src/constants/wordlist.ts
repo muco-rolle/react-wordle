@@ -56,4 +56,6 @@ export const WORDS = [
   'HEPFO',
   'ISOKO',
   'IBATI',
+  'IMITI',
+  'ITABI'
 ]
