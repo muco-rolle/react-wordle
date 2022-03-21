@@ -57,5 +57,7 @@ export const WORDS = [
   'ISOKO',
   'IBATI',
   'IMITI',
-  'ITABI'
+  'ITABI',
+  'IMANA',
+  'INAMA'
 ]
