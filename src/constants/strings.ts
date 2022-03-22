@@ -10,7 +10,7 @@ export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Indome ntizikwiye'
 export const WORD_NOT_FOUND_MESSAGE = 'Iryo jambo ntiribaho mu Kirundi'
 export const HARD_MODE_ALERT_MESSAGE =
-  'Hard Mode can only be enabled at the start!'
+  'Umukino ugoye ushobora kuwujano ariho ugitangura!'
 export const HARD_MODE_DESCRIPTION =
   'Any revealed hints must be used in subsequent guesses'
 export const HIGH_CONTRAST_MODE_DESCRIPTION = 'For improved color vision'
