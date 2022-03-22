@@ -12,7 +12,6 @@ export const WORDS = [
   'IBUYE',
   'IPERA',
   'NYOKO',
-  'IFUKU',
   'IKAZE',
   'UBUKI',
   'INAMA',
@@ -66,4 +65,5 @@ export const WORDS = [
   'IVOKA',
   'ICUPA',
   'INOTI',
+  'AKAZI',
 ]

@@ -8,12 +8,17 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="Ingene bakina" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal
+      title="Urukino rugenda uku :"
+      isOpen={isOpen}
+      handleClose={handleClose}
+    >
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Tomboza ijambo gushika incuro 6. Inyuma y'ijambo ugerageje, amabara
-        araza guhinduka kugirango werekane uburyo ivyo uriko uratomboza biri
-        hafi y'ijambo.
+        Tora ijambo ryinyegeje. Ushobora kugerageza incuro 6. Uko ukina, amabara
+        y'indome araza guhinduka. Ayo mabara aza kukwereka ko uriko uregereza
+        gutora ijambo ryinyegeje.
       </p>
+      <p>Akarorero: </p>
 
       <div className="flex justify-center mb-1 mt-4">
         <Cell
@@ -28,7 +33,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="I" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Urudome U ruri mw'ijambo kandi ruri mu kibanza carwo.
+        Urudome "U" ruri mw'ijambo ryinyegeje kandi ruri mu kibanza carwo.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
@@ -44,7 +49,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="A" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Urudome A ruri mw'ijambo ariko ntiruri mu kibanza carwo.
+        Urudome "A" ruri mw'ijambo ryinyegeje ariko ntiruri mu kibanza carwo.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
@@ -55,20 +60,20 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="A" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Urudome Z ntarurimwo mw'ijambo.
+        Urudome "Z" ntirurimwo mw'ijambo ryinyegeje.
       </p>
 
       <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
-        Hari ikibazo mwahuye uriko urakina. Bimenyeshe mu gasandugu k'amakete
-        kuri Twitter -{' '}
+        Hari ikibazo wagize mu gukina ? Bimenyeshe mu gasandugu k'amakete kuri
+        'Twitter' -{' '}
         <a
           href="https://twitter.com/lionelkubwimana"
           className="underline font-bold"
         >
           Fyonda hano !
         </a>{' '}
-        <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
-          Code yanfashije gukora uno mukino -{' '}
+        <p className="mt-6 italic text-xs text-gray-500 dark:text-gray-300">
+          Code yamfashije gukora runo rukino -{' '}
           <a
             href="https://github.com/cwackerfuss/react-wordle"
             className="underline font-bold"
