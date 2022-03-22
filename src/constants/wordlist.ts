@@ -17,6 +17,7 @@ export const WORDS = [
   'inama',
   'indya',
   'itabi',
+  'amase',
   'ivubi',
   'imari',
   'nzero',
