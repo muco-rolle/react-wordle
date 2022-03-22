@@ -22,7 +22,7 @@ export const shareStatus = (
       lost ? 'X' : guesses.length
     }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n` +
     generateEmojiGrid(guesses, getEmojiTiles(isDarkMode, isHighContrastMode)) +
-    '\n\nhttps://ijambo.vercel.app/'
+    `\n\n${process.env.REACT_APP_DOMAIN_NAME}`
 
   const shareData = { text: textToShare }
 

@@ -9,6 +9,7 @@ export const VALID_GUESSES = [
   'ariko',
   'aside',
   'kwaya',
+  'ipete',
   'kwaza',
   'ibaba',
   'bambe',
