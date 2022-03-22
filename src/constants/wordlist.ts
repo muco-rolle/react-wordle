@@ -66,4 +66,12 @@ export const WORDS = [
   'ICUPA',
   'INOTI',
   'AKAZI',
+  'BWIZA',
+  'IPASI',
+  'IHASA',
+  'IPINE',
+  'IWABO',
+  'IWACU',
+  'IWAWE',
+  'ISATO',
 ]
