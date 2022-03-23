@@ -1,5 +1,7 @@
 import { Cell } from '../grid/Cell'
 import { BaseModal } from './BaseModal'
+import { WORDS } from '../../constants/wordlist'
+import { VALID_GUESSES } from '../../constants/validGuesses'
 
 type Props = {
   isOpen: boolean
@@ -18,9 +20,11 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         y'indome araza guhinduka. Ayo mabara aza kukwereka ko uriko uregereza
         gutora ijambo ryinyegeje.
       </p>
-      <p>Akarorero: </p>
+      <p className="mt-4 font-bold text-sm text-gray-500 dark:text-gray-300">
+        Akarorero :
+      </p>
 
-      <div className="flex justify-center mb-1 mt-4">
+      <div className="flex justify-center mb-1 mt-2">
         <Cell
           isRevealing={true}
           isCompleted={true}
@@ -33,7 +37,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="I" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Urudome "U" ruri mw'ijambo ryinyegeje kandi ruri mu kibanza carwo.
+        Urudome <span className="font-bold">U</span> ruri mw'ijambo ryinyegeje
+        kandi ruri mu kibanza carwo.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
@@ -49,7 +54,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="A" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Urudome "A" ruri mw'ijambo ryinyegeje ariko ntiruri mu kibanza carwo.
+        Urudome <span className="font-bold">A</span> ruri mw'ijambo ryinyegeje
+        ariko ntiruri mu kibanza carwo.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
@@ -60,7 +66,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="A" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Urudome "Z" ntirurimwo mw'ijambo ryinyegeje.
+        Urudome <span className="font-bold">Z</span> ntirurimwo mw'ijambo
+        ryinyegeje.
       </p>
 
       <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
@@ -72,7 +79,18 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         >
           Fyonda hano !
         </a>{' '}
-        <p className="mt-6 italic text-xs text-gray-500 dark:text-gray-300">
+        <p className="mt-6 italic text-s text-gray-500 dark:text-gray-300">
+          Muri runo rukino, harimwo amajambo{' '}
+          <span className="font-bold">
+            {WORDS.concat(VALID_GUESSES).length}
+          </span>{' '}
+          gusa.
+        </p>
+        <p className="mt-4 italic text-s text-gray-500 dark:text-gray-300">
+          <span className="font-bold">Ijambo</span> ryinyegeje ni rimwe umunsi
+          wose. Rihinduka isaha 12 zo mw'ijoro.
+        </p>
+        <p className="mt-4 italic text-xs text-gray-500 dark:text-gray-300">
           Code yamfashije gukora runo rukino -{' '}
           <a
             href="https://github.com/cwackerfuss/react-wordle"
