@@ -78,4 +78,5 @@ export const WORDS = [
   'sinzi',
   'ijipo',
   'akana',
+  'urugo',
 ]
