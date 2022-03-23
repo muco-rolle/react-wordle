@@ -967,6 +967,8 @@ export const VALID_GUESSES = [
   'isiya',
   'isogi',
   'isoko',
+  'isoro',
+  'ihoro',
   'isoni',
   'isosa',
   'isoya',
