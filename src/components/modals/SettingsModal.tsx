@@ -5,6 +5,7 @@ import {
   HARD_MODE_DESCRIPTION,
   HIGH_CONTRAST_MODE_DESCRIPTION,
 } from '../../constants/strings'
+import { solutionIndex } from '../../lib/words'
 
 type Props = {
   isOpen: boolean
@@ -55,7 +56,9 @@ export const SettingsModal = ({
               text="Ndakunda Ikirundi"
             />
           </p>
-          <p className="mt-2 text-xs text-gray-500 dark:text-gray-300">#1</p>
+          <p className="mt-2 text-xs text-gray-500 dark:text-gray-300">
+            #{solutionIndex}
+          </p>
         </div>
       </div>
     </BaseModal>
