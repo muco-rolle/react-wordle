@@ -40,11 +40,12 @@ Open [http://localhost][](http://localhost) in browser.
 
 #### Contributers
 
-[Any-Arlène Niyubahwe](https://twitter.com/mugisha93)
-[Jonathan Nkurunziza](https://twitter.com/inganzamarumpu)
-[Max Brillant](https://twitter.com/max_brillant)
-[Jean Didier](https://twitter.com/jeandidier)
-[Ingabire Luc Noël](https://twitter.com/IngabireLucNoel)
-[Franck Nijimbere](https://twitter.com/nijfranck)
-[Olivier Mwamimwiza](https://twitter.com/OlivierMwami)
-[Nduwayezu Irénée](https://twitter.com/NduwayezuI)
+- [Any-Arlène Niyubahwe](https://twitter.com/mugisha93)
+- [Jonathan Nkurunziza](https://twitter.com/inganzamarumpu)
+- [Max Brillant](https://twitter.com/max_brillant)
+- [Jean Didier](https://twitter.com/jeandidier)
+- [Ingabire Luc Noël](https://twitter.com/IngabireLucNoel)
+- [Franck Nijimbere](https://twitter.com/nijfranck)
+- [Olivier Mwamimwiza](https://twitter.com/OlivierMwami)
+- [Nduwayezu Irénée](https://twitter.com/NduwayezuI)
+- [Muco Rôlle Trésor](https://twitter.com/mucotreso)
