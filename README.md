@@ -38,7 +38,7 @@ $> docker run -d -p 80:8080  --name reactle-prod reactle:prod
 
 Open [http://localhost](http://localhost) in browser.
 
-#### Contributers
+#### Contributors
 
 - [Lionel Kubwimana](https://twitter.com/lionelkubwimana)
 - [Any-Arlène Niyubahwe](https://twitter.com/mugisha93)
@@ -51,3 +51,4 @@ Open [http://localhost](http://localhost) in browser.
 - [Nduwayezu Irénée](https://twitter.com/NduwayezuI)
 - [Muco Rôlle Trésor](https://twitter.com/mucotreso)
 - [Jean Thierry Havyarimana](https://twitter.com/jeantijo)
+- [Isaac Nijimpaye](https://twitter.com/nijimpaye)
