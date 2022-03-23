@@ -40,6 +40,7 @@ Open [http://localhost](http://localhost) in browser.
 
 #### Contributers
 
+- [Lionel Kubwimana](https://twitter.com/lionelkubwimana)
 - [Any-Arlène Niyubahwe](https://twitter.com/mugisha93)
 - [Jonathan Nkurunziza](https://twitter.com/inganzamarumpu)
 - [Max Brillant](https://twitter.com/max_brillant)
