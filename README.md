@@ -4,7 +4,7 @@ This is a clone project of the popular word guessing game we all know and love. 
 
 This version is to be played with the Kirundi language.
 
-[**Try out the app!**][](https://ijambo.app/)
+[**Try out the app!**](https://ijambo.app/)
 
 ## Build and run
 
@@ -27,7 +27,7 @@ $> docker build -t reactle:dev -f docker/Dockerfile .
 $> docker run -d -p 3000:3000 --name reactle-dev reactle:dev
 ```
 
-Open [http://localhost:3000][](http://localhost:3000) in browser.
+Open [http://localhost:3000](http://localhost:3000) in browser.
 
 #### Production
 
@@ -36,7 +36,7 @@ $> docker build --target=prod -t reactle:prod -f docker/Dockerfile .
 $> docker run -d -p 80:8080  --name reactle-prod reactle:prod
 ```
 
-Open [http://localhost][](http://localhost) in browser.
+Open [http://localhost](http://localhost) in browser.
 
 #### Contributers
 
