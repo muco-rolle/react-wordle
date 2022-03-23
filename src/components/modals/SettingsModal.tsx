@@ -36,7 +36,7 @@ export const SettingsModal = ({
           description={HARD_MODE_DESCRIPTION}
         />
         <SettingsToggle
-          settingName="Amabara atamena amaso"
+          settingName="Amabara yoroshe"
           flag={isDarkMode}
           handleFlag={handleDarkMode}
         />
