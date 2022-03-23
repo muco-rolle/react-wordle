@@ -18,7 +18,7 @@ export const WRONG_SPOT_MESSAGE = (guess: string, position: number) =>
   `Utegerezwa gukoresha ${guess} mu kibanza ${position}`
 export const NOT_CONTAINED_MESSAGE = (letter: string) =>
   `Ijambo ritegerezwa kuba ririmwo urudome ${letter}`
-export const ENTER_TEXT = 'Kwemeza'
+export const ENTER_TEXT = 'KWEMEZA'
 export const STATISTICS_TITLE = 'Aho ugejeje urukino'
 export const GUESS_DISTRIBUTION_TEXT = 'Uko wagiye urabitora'
 export const NEW_WORD_TEXT = 'Ijambo rishasha riza muri'
