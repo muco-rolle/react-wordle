@@ -91,7 +91,16 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
           wose. Rihinduka isaha 12 zo mw'ijoro.
         </p>
         <p className="mt-4 italic text-xs text-gray-500 dark:text-gray-300">
-          Code yamfashije gukora runo rukino -{' '}
+          Abantu bafashize mu gutunganya runo rukino bari -{' '}
+          <a
+            href="https://github.com/lionel-k/react-wordle#contributers"
+            className="underline font-bold"
+          >
+            hano
+          </a>{' '}
+        </p>
+        <p className="mt-4 italic text-xs text-gray-500 dark:text-gray-300">
+          Code yamfashije gukora runo rukino{' '}
           <a
             href="https://github.com/cwackerfuss/react-wordle"
             className="underline font-bold"
