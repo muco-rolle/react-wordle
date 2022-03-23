@@ -1,4 +1,5 @@
 import { BaseModal } from './BaseModal'
+import { Link } from './Link'
 import { SettingsToggle } from './SettingsToggle'
 import {
   HARD_MODE_DESCRIPTION,
@@ -46,6 +47,16 @@ export const SettingsModal = ({
           handleFlag={handleHighContrastMode}
           description={HIGH_CONTRAST_MODE_DESCRIPTION}
         />
+        <div className="flex justify-between gap-4 py-3">
+          <p className="mt-2 text-xs text-gray-500 dark:text-gray-300">
+            2022{' '}
+            <Link
+              href="https://www.instagram.com/ndakunda.ikirundi/"
+              text="Ndakunda Ikirundi"
+            />
+          </p>
+          <p className="mt-2 text-xs text-gray-500 dark:text-gray-300">#1</p>
+        </div>
       </div>
     </BaseModal>
   )

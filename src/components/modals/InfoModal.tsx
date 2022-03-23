@@ -1,5 +1,6 @@
 import { Cell } from '../grid/Cell'
 import { BaseModal } from './BaseModal'
+import { Link } from './Link'
 import { WORDS } from '../../constants/wordlist'
 import { VALID_GUESSES } from '../../constants/validGuesses'
 
@@ -73,12 +74,11 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
         Hari ikibazo wagize mu gukina ? Bimenyeshe mu gasandugu k'amakete kuri
         'Twitter' -{' '}
-        <a
+        <Link
           href="https://twitter.com/lionelkubwimana"
           className="underline font-bold"
-        >
-          Fyonda hano !
-        </a>{' '}
+          text="Fyonda hano !"
+        />
         <p className="mt-6 italic text-s text-gray-500 dark:text-gray-300">
           Muri runo rukino, harimwo amajambo{' '}
           <span className="font-bold">
@@ -91,22 +91,20 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
           wose. Rihinduka isaha 12 zo mw'ijoro.
         </p>
         <p className="mt-4 italic text-xs text-gray-500 dark:text-gray-300">
-          Abantu bafashize mu gutunganya runo rukino bari -{' '}
-          <a
-            href="https://github.com/lionel-k/react-wordle#contributers"
+          Abantu bafashize mu gutunganya runo rukino bari{' '}
+          <Link
+            href="https://github.com/lionel-k/react-wordle#contributors"
             className="underline font-bold"
-          >
-            hano
-          </a>{' '}
+            text="hano"
+          />
         </p>
         <p className="mt-4 italic text-xs text-gray-500 dark:text-gray-300">
           Code yamfashije gukora runo rukino{' '}
-          <a
+          <Link
             href="https://github.com/cwackerfuss/react-wordle"
             className="underline font-bold"
-          >
-            Yirabe ngaha
-          </a>{' '}
+            text="yirabe ngaha"
+          />
         </p>
       </p>
     </BaseModal>
