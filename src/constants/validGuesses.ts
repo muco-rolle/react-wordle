@@ -32,6 +32,7 @@ export const VALID_GUESSES = [
   'umuce',
   'imico',
   'igicu',
+  'egome',
   'icumi',
   'idari',
   'idebe',
