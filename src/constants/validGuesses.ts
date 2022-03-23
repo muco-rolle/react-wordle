@@ -219,4 +219,7 @@ export const VALID_GUESSES = [
   'shahu',
   'uruvi',
   'uruyo',
+  'kurwa',
+  'iteke',
+  'isare',
 ]
