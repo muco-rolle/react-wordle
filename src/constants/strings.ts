@@ -30,4 +30,4 @@ export const CURRENT_STREAK_TEXT = 'Iminsi umaze utsinda wikurikiranya'
 export const BEST_STREAK_TEXT = 'Iminsi myinshi watsinze wikurikiranya'
 export const HARD_MODE_DESCRIPTION =
   'Indome zose weretswe zitegerezwa gukoreshwa mu majambo akurikira'
-export const HIGH_CONTRAST_MODE_DESCRIPTION = 'Kugira bisomeke uri ku zuba'
+export const HIGH_CONTRAST_MODE_DESCRIPTION = 'Kugira bisomeke neza uri ku zuba'
