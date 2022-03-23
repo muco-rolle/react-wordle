@@ -1,4 +1,8 @@
-import { ChartBarIcon, InformationCircleIcon } from '@heroicons/react/outline'
+import {
+  ChartBarIcon,
+  CogIcon,
+  InformationCircleIcon,
+} from '@heroicons/react/outline'
 import { GAME_TITLE } from '../../constants/strings'
 
 type Props = {
@@ -25,6 +29,10 @@ export const Navbar = ({
             className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
             onClick={() => setIsStatsModalOpen(true)}
           />
+          {/* <CogIcon
+            className="h-6 w-6 cursor-pointer dark:stroke-white"
+            onClick={() => setIsSettingsModalOpen(true)}
+          /> */}
         </div>
       </div>
       <hr></hr>
