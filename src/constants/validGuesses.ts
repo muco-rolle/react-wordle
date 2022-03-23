@@ -222,4 +222,7 @@ export const VALID_GUESSES = [
   'kurwa',
   'iteke',
   'isare',
+  'ijipo',
+  'akana',
+  'urugo',
 ]
