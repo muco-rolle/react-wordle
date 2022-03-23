@@ -50,3 +50,4 @@ Open [http://localhost](http://localhost) in browser.
 - [Olivier Mwamimwiza](https://twitter.com/OlivierMwami)
 - [Nduwayezu Irénée](https://twitter.com/NduwayezuI)
 - [Muco Rôlle Trésor](https://twitter.com/mucotreso)
+- [Jean Thierry Havyarimana](https://twitter.com/jeantijo)
