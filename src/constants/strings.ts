@@ -7,7 +7,7 @@ export const WIN_MESSAGES = [
   'Uri incambwenge 👍🏾 !',
   'Urarigemye 👍🏾 !',
 ]
-export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
+export const GAME_COPIED_MESSAGE = 'Urukino rwakoporowe'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Indome ntizikwiye'
 export const WORD_NOT_FOUND_MESSAGE = 'Iryo jambo ntiririmwo. Gerageza irindi.'
 export const HARD_MODE_ALERT_MESSAGE =
