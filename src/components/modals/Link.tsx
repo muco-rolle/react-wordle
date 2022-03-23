@@ -6,7 +6,10 @@ type Props = {
 
 export const Link = ({ href, text, className }: Props) => {
   return (
-    <a href={href} className={className}>
+    <a
+      href={href}
+      className={`focus:outline-none underline font-bold ${className}`}
+    >
       {text}
     </a>
   )

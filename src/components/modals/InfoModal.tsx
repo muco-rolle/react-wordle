@@ -71,13 +71,13 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         ryinyegeje.
       </p>
 
-      <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
+      <p className="mt-6 italic text-xs text-gray-500 dark:text-gray-300">
         Hari ikibazo wagize mu gukina ? Bimenyeshe mu gasandugu k'amakete kuri
         'Twitter' -{' '}
         <Link
           href="https://twitter.com/lionelkubwimana"
           className="underline font-bold"
-          text="Fyonda hano !"
+          text="Fyonda hano"
         />
         <p className="mt-6 italic text-s text-gray-500 dark:text-gray-300">
           Muri runo rukino, harimwo amajambo{' '}
