@@ -756,6 +756,7 @@ export const VALID_GUESSES = [
   'igire',
   'igisa',
   'igiti',
+  'igito',
   'igiye',
   'igize',
   'igono',
