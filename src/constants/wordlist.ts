@@ -76,4 +76,5 @@ export const WORDS = [
   'iwawe',
   'isato',
   'sinzi',
+  'ijipo',
 ]
