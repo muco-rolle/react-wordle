@@ -1736,6 +1736,7 @@ export const VALID_GUESSES = [
   'ucika',
   'ucike',
   'ucira',
+  'inema',
   'ucire',
   'uciye',
   'ucura',
