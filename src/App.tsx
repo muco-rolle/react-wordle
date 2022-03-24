@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-// import axios from 'axios'
-
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
 import { InfoModal } from './components/modals/InfoModal'
@@ -179,12 +177,6 @@ function App() {
     )
   }
 
-  const saveNewGuess = (currentGuess: string) => {
-    // axios.post(`https://jsonplaceholder.typicode.com/api/v1/words`, {
-    //   word: currentGuess,
-    // })
-  }
-
   const onEnter = () => {
     if (isGameWon || isGameLost) {
       return
@@ -199,7 +191,6 @@ function App() {
 
     if (!isWordInWordList(currentGuess)) {
       setCurrentRowClass('jiggle')
-      saveNewGuess(currentGuess)
       return showErrorAlert(WORD_NOT_FOUND_MESSAGE, {
         onClose: clearCurrentRowClass,
       })
