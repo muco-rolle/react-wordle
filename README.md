@@ -52,3 +52,5 @@ Open [http://localhost](http://localhost) in browser.
 - [Muco Rôlle Trésor](https://twitter.com/mucotreso)
 - [Jean Thierry Havyarimana](https://twitter.com/jeantijo)
 - [Isaac Nijimpaye](https://twitter.com/nijimpaye)
+- [Landry Gakuba](https://twitter.com/GakubaLandry)
+- [Miraiga](https://twitter.com/msmiraiga)
