@@ -1546,8 +1546,6 @@ export const VALID_GUESSES = [
   'ozofe',
   'paska',
   'pfuma',
-  'phoqu',
-  'porne',
   'pwaro',
   'ramwo',
   'randa',
