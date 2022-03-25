@@ -195,7 +195,7 @@ function App() {
       setCurrentRowClass('jiggle')
 
       axios.post(REACT_APP_BACKEND_ENDPOINT, {
-        word: { value: currentGuess },
+        word: { value: currentGuess.toLowerCase() },
       })
 
       return showErrorAlert(WORD_NOT_FOUND_MESSAGE, {
