@@ -832,6 +832,8 @@ export const VALID_GUESSES = [
   'indya',
   'ineza',
   'inema',
+  'uzuza',
+  'ubaka',
   'ingwa',
   'ingwe',
   'inivo',
