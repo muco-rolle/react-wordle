@@ -802,6 +802,8 @@ export const VALID_GUESSES = [
   'imaze',
   'imbwa',
   'imena',
+  'twara',
+  'hwata',
   'imera',
   'imeri',
   'imero',
