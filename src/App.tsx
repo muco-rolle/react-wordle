@@ -6,33 +6,34 @@ import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
 import {
-  WIN_MESSAGES,
-  GAME_COPIED_MESSAGE,
-  NOT_ENOUGH_LETTERS_MESSAGE,
-  WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
+  GAME_COPIED_MESSAGE,
   HARD_MODE_ALERT_MESSAGE,
+  NOT_ENOUGH_LETTERS_MESSAGE,
+  REACT_APP_BACKEND_ENDPOINT,
+  WIN_MESSAGES,
+  WORD_NOT_FOUND_MESSAGE,
 } from './constants/strings'
 import {
-  MAX_WORD_LENGTH,
-  MAX_CHALLENGES,
-  REVEAL_TIME_MS,
   GAME_LOST_INFO_DELAY,
+  MAX_CHALLENGES,
+  MAX_WORD_LENGTH,
+  REVEAL_TIME_MS,
   WELCOME_INFO_MODAL_MS,
 } from './constants/settings'
 import {
-  isWordInWordList,
-  isWinningWord,
-  solution,
   findFirstUnusedReveal,
+  isWinningWord,
+  isWordInWordList,
+  solution,
   unicodeLength,
 } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
+  getStoredIsHighContrastMode,
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
   setStoredIsHighContrastMode,
-  getStoredIsHighContrastMode,
 } from './lib/localStorage'
 import { default as GraphemeSplitter } from 'grapheme-splitter'
 
@@ -193,7 +194,7 @@ function App() {
     if (!isWordInWordList(currentGuess)) {
       setCurrentRowClass('jiggle')
 
-      axios.post(`http://localhost:3001/api/v1/missing_words`, {
+      axios.post(REACT_APP_BACKEND_ENDPOINT, {
         word: { value: currentGuess },
       })
 
