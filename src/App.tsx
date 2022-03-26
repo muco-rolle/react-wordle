@@ -198,6 +198,10 @@ function App() {
         word: { value: currentGuess.toLowerCase() },
       })
 
+      if ('vibrate' in navigator) {
+        navigator.vibrate(200)
+      }
+
       return showErrorAlert(WORD_NOT_FOUND_MESSAGE, {
         onClose: clearCurrentRowClass,
       })
