@@ -1057,6 +1057,7 @@ export const VALID_GUESSES = [
   'kinza',
   'kirya',
   'kitwa',
+  'irobo',
   'kubwa',
   'kugwa',
   'kumpa',
