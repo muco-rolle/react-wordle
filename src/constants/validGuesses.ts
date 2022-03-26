@@ -260,6 +260,7 @@ export const VALID_GUESSES = [
   'arara',
   'arare',
   'arasa',
+  'imisa',
   'arava',
   'araza',
   'arazi',
