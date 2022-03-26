@@ -236,6 +236,9 @@ function App() {
       setCurrentGuess('')
 
       if (winningWord) {
+        if ('vibrate' in navigator) {
+          navigator.vibrate(1000)
+        }
         setStats(addStatsForCompletedGame(stats, guesses.length))
         return setIsGameWon(true)
       }
