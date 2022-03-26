@@ -253,6 +253,7 @@ export const VALID_GUESSES = [
   'araca',
   'araha',
   'araja',
+  'ijipo',
   'ntaco',
   'araje',
   'araka',
