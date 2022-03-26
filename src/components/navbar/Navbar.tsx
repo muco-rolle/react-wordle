@@ -3,7 +3,6 @@ import {
   CogIcon,
   InformationCircleIcon,
 } from '@heroicons/react/outline'
-import { GAME_TITLE } from '../../constants/strings'
 
 type Props = {
   setIsInfoModalOpen: (value: boolean) => void
@@ -23,9 +22,12 @@ export const Navbar = ({
           className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
         />
-        <p className="text-3xl ml-2.5 font-bold dark:text-white">
+        {/* <p className="text-3xl ml-2.5 font-bold dark:text-white">
           {GAME_TITLE}
-        </p>
+        </p> */}
+        <div>
+          <img src="/ijambo.png" alt="Ijambo" className="h-16" />
+        </div>
         <div className="right-icons">
           <ChartBarIcon
             className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
