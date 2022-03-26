@@ -179,6 +179,12 @@ function App() {
     )
   }
 
+  const vibrate = (duration = 200) => {
+    if (navigator.vibrate) {
+      navigator.vibrate(duration)
+    }
+  }
+
   const onEnter = () => {
     if (isGameWon || isGameLost) {
       return
@@ -186,6 +192,7 @@ function App() {
 
     if (!(unicodeLength(currentGuess) === MAX_WORD_LENGTH)) {
       setCurrentRowClass('jiggle')
+      vibrate()
       return showErrorAlert(NOT_ENOUGH_LETTERS_MESSAGE, {
         onClose: clearCurrentRowClass,
       })
@@ -198,9 +205,7 @@ function App() {
         word: { value: currentGuess.toLowerCase() },
       })
 
-      if ('vibrate' in navigator) {
-        navigator.vibrate(200)
-      }
+      vibrate()
 
       return showErrorAlert(WORD_NOT_FOUND_MESSAGE, {
         onClose: clearCurrentRowClass,
@@ -236,9 +241,7 @@ function App() {
       setCurrentGuess('')
 
       if (winningWord) {
-        if ('vibrate' in navigator) {
-          navigator.vibrate(1000)
-        }
+        vibrate(1000)
         setStats(addStatsForCompletedGame(stats, guesses.length))
         return setIsGameWon(true)
       }
