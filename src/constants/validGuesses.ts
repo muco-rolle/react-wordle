@@ -18,6 +18,7 @@ export const VALID_GUESSES = [
   'abasa',
   'abase',
   'vanga',
+  'ikiba ',
   'senya',
   'abata',
   'abate',
