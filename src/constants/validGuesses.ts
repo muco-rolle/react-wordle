@@ -630,7 +630,6 @@ export const VALID_GUESSES = [
   'havyo',
   'hemba',
   'hembe',
-  'hepho',
   'hesha',
   'heshe',
   'hicwa',
