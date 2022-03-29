@@ -716,6 +716,7 @@ export const VALID_GUESSES = [
   'ibura',
   'iburi',
   'isope',
+  'pompa',
   'ibuye',
   'ibuze',
   'icago',
