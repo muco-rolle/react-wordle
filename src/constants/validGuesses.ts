@@ -713,6 +713,7 @@ export const VALID_GUESSES = [
   'isema',
   'urota',
   'uwota',
+  'zande',
   'zipfe',
   'urera',
   'kanda',
