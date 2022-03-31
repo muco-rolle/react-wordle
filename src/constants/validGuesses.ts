@@ -593,6 +593,7 @@ export const VALID_GUESSES = [
   'gizwe',
   'gomba',
   'gonda',
+  'twize',
   'gubwa',
   'gukwa',
   'gumya',
