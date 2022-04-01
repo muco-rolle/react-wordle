@@ -18,6 +18,7 @@ export const WORDS = [
   'ndeka',
   'ingwe',
   'kumwa',
+  'nyika',
   'nitwa',
   'kanje',
   'wanje',
