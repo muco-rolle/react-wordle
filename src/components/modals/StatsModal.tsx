@@ -1,5 +1,8 @@
+import { useCallback, useEffect, useState } from 'react'
+import axios from 'axios'
 import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
+import { RankingBar, RankingStats } from '../stats/RankingBar'
 import { Histogram } from '../stats/Histogram'
 import { GameStats } from '../../lib/localStorage'
 import { shareStatus } from '../../lib/share'
@@ -11,7 +14,11 @@ import {
   NEW_WORD_TEXT,
   SHARE_TEXT,
   CORRECT_WORD_MESSAGE,
+  INTERNATIONAL_COMPETITION_TEXT,
+  YOUR_SCORE_TEXT,
 } from '../../constants/strings'
+
+import { RANKINGS_ENDPOINT } from '../../constants/endpoints'
 
 type Props = {
   isOpen: boolean
@@ -40,6 +47,34 @@ export const StatsModal = ({
   isHighContrastMode,
   numberOfGuessesMade,
 }: Props) => {
+  const gameScore = localStorage.getItem('gameScore')
+  const country = localStorage.getItem('country')
+
+  const [rankingStats, setRankingStats] = useState<RankingStats>({
+    national_rank: '/',
+    international_rank: '/',
+    median_national_score: 0,
+    median_international_score: 0,
+    country: country || '',
+  })
+
+  const getRankingStats = useCallback(async () => {
+    if (!gameScore || !country) return
+
+    const result = await axios.get(RANKINGS_ENDPOINT, {
+      params: { score: gameScore, country, solution },
+    })
+
+    const data = await result.data
+    setRankingStats(data as RankingStats)
+  }, [gameScore, country])
+
+  useEffect(() => {
+    if (!isOpen) return
+
+    getRankingStats()
+  }, [isOpen, getRankingStats])
+
   if (gameStats.totalGames <= 0) {
     return (
       <BaseModal
@@ -51,6 +86,7 @@ export const StatsModal = ({
       </BaseModal>
     )
   }
+
   return (
     <BaseModal
       title={STATISTICS_TITLE}
@@ -65,8 +101,19 @@ export const StatsModal = ({
         gameStats={gameStats}
         numberOfGuessesMade={numberOfGuessesMade}
       />
+      {isGameWon && gameScore && parseInt(gameScore) > 0 && (
+        <>
+          <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
+            {INTERNATIONAL_COMPETITION_TEXT}
+          </h4>
+          <p className="text-m font-bold leading-5 text-gray-500 dark:text-gray-400">
+            {YOUR_SCORE_TEXT}: {gameScore}
+          </p>
+          {<RankingBar rankingStats={rankingStats} />}
+        </>
+      )}
       {isGameLost && (
-        <p className="text-s leading-6 font-medium text-gray-900 dark:text-gray-100">
+        <p className="text-sm mt-4 leading-6 font-medium text-gray-900 dark:text-gray-100">
           {CORRECT_WORD_MESSAGE(solution)}
         </p>
       )}
