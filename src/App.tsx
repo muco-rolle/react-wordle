@@ -69,6 +69,9 @@ function App() {
   const [guesses, setGuesses] = useState<string[]>(() => {
     const loaded = loadGameStateFromLocalStorage()
     if (loaded?.solution !== solution) {
+      localStorage.removeItem('saved')
+      localStorage.setItem('startTime', new Date().toISOString())
+      localStorage.removeItem('gameScore')
       return []
     }
     const gameWasWon = loaded.guesses.includes(solution)
@@ -80,6 +83,9 @@ function App() {
       showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
         persist: true,
       })
+    }
+    if (!localStorage.getItem('startTime')) {
+      localStorage.setItem('startTime', new Date().toISOString())
     }
     return loaded.guesses
   })
@@ -153,12 +159,16 @@ function App() {
         delayMs,
         onClose: () => setIsStatsModalOpen(true),
       })
+      const isWin = true
+      saveGameStateToDatabase(isWin)
     }
 
     if (isGameLost) {
       setTimeout(() => {
         setIsStatsModalOpen(true)
       }, GAME_LOST_INFO_DELAY)
+      const isWin = false
+      saveGameStateToDatabase(isWin)
     }
   }, [isGameWon, isGameLost, showSuccessAlert])
 
@@ -178,13 +188,24 @@ function App() {
     )
   }
 
+  const vibrate = (duration = 200) => {
+    if (navigator.vibrate) {
+      navigator.vibrate(duration)
+    }
+  }
+
   const onEnter = () => {
     if (isGameWon || isGameLost) {
       return
     }
 
+    if (!localStorage.getItem('startTime')) {
+      localStorage.setItem('startTime', new Date().toISOString())
+    }
+
     if (!(unicodeLength(currentGuess) === MAX_WORD_LENGTH)) {
       setCurrentRowClass('jiggle')
+      vibrate()
       return showErrorAlert(NOT_ENOUGH_LETTERS_MESSAGE, {
         onClose: clearCurrentRowClass,
       })
@@ -192,15 +213,8 @@ function App() {
 
     if (!isWordInWordList(currentGuess)) {
       setCurrentRowClass('jiggle')
-
-      axios.post(REACT_APP_BACKEND_ENDPOINT, {
-        word: { value: currentGuess.toLowerCase() },
-      })
-
-      if ('vibrate' in navigator) {
-        navigator.vibrate(200)
-      }
-
+      saveCurrentGuessToDatabase(currentGuess)
+      vibrate()
       return showErrorAlert(WORD_NOT_FOUND_MESSAGE, {
         onClose: clearCurrentRowClass,
       })
@@ -235,6 +249,7 @@ function App() {
       setCurrentGuess('')
 
       if (winningWord) {
+        vibrate(1000)
         setStats(addStatsForCompletedGame(stats, guesses.length))
         return setIsGameWon(true)
       }
@@ -268,6 +283,7 @@ function App() {
               currentRowClassName={currentRowClass}
             />
           </div>
+
         </div>
 
         <Keyboard

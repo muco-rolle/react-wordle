@@ -1,3 +1,6 @@
+// import * as dayjs from 'dayjs'
+// import dayjs from 'dayjs'
+
 import { WORDS } from '../constants/wordlist'
 import { VALID_GUESSES } from '../constants/validGuesses'
 import { WRONG_SPOT_MESSAGE, NOT_CONTAINED_MESSAGE } from '../constants/strings'
@@ -76,7 +79,7 @@ export const localeAwareUpperCase = (text: string) => {
 
 export const getWordOfDay = () => {
   // March 22, 2022 Game Epoch
-  const epochMs = new Date(2022, 2, 22).valueOf()
+  const epochMs = new Date(2022, 2, 28).valueOf()
   const now = Date.now()
   const msInDay = 86400000
   const index = Math.floor((now - epochMs) / msInDay)
@@ -84,7 +87,7 @@ export const getWordOfDay = () => {
 
   return {
     solution: localeAwareUpperCase(WORDS[index % WORDS.length]),
-    solutionIndex: index,
+    solutionIndex: index + 6,
     tomorrow: nextday,
   }
 }
