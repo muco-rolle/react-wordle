@@ -1,10 +1,21 @@
-import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { default as GraphemeSplitter } from 'grapheme-splitter'
+import { useEffect, useState } from 'react'
+import './App.css'
+import { AlertContainer } from './components/alerts/AlertContainer'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
 import { InfoModal } from './components/modals/InfoModal'
-import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
+import { StatsModal } from './components/modals/StatsModal'
+import { Navbar } from './components/navbar/Navbar'
+import {
+  GAME_LOST_INFO_DELAY,
+  MAX_CHALLENGES,
+  MAX_WORD_LENGTH,
+  REVEAL_TIME_MS,
+  WELCOME_INFO_MODAL_MS,
+} from './constants/settings'
 import {
   CORRECT_WORD_MESSAGE,
   GAME_COPIED_MESSAGE,
@@ -14,13 +25,14 @@ import {
   WIN_MESSAGES,
   WORD_NOT_FOUND_MESSAGE,
 } from './constants/strings'
+import { useAlert } from './context/AlertContext'
 import {
-  GAME_LOST_INFO_DELAY,
-  MAX_CHALLENGES,
-  MAX_WORD_LENGTH,
-  REVEAL_TIME_MS,
-  WELCOME_INFO_MODAL_MS,
-} from './constants/settings'
+  getStoredIsHighContrastMode,
+  loadGameStateFromLocalStorage,
+  saveGameStateToLocalStorage,
+  setStoredIsHighContrastMode,
+} from './lib/localStorage'
+import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
   findFirstUnusedReveal,
   isWinningWord,
@@ -28,19 +40,6 @@ import {
   solution,
   unicodeLength,
 } from './lib/words'
-import { addStatsForCompletedGame, loadStats } from './lib/stats'
-import {
-  getStoredIsHighContrastMode,
-  loadGameStateFromLocalStorage,
-  saveGameStateToLocalStorage,
-  setStoredIsHighContrastMode,
-} from './lib/localStorage'
-import { default as GraphemeSplitter } from 'grapheme-splitter'
-
-import './App.css'
-import { AlertContainer } from './components/alerts/AlertContainer'
-import { useAlert } from './context/AlertContext'
-import { Navbar } from './components/navbar/Navbar'
 
 function App() {
   const prefersDarkMode = window.matchMedia(
@@ -258,15 +257,19 @@ function App() {
         setIsStatsModalOpen={setIsStatsModalOpen}
         setIsSettingsModalOpen={setIsSettingsModalOpen}
       />
-      <div className="pt-2 px-1 pb-8 md:max-w-7xl w-full mx-auto sm:px-6 lg:px-8 flex flex-col grow">
-        <div className="pb-6 grow">
-          <Grid
-            guesses={guesses}
-            currentGuess={currentGuess}
-            isRevealing={isRevealing}
-            currentRowClassName={currentRowClass}
-          />
+
+      <div id="game">
+        <div id="board-container">
+          <div id="board">
+            <Grid
+              guesses={guesses}
+              currentGuess={currentGuess}
+              isRevealing={isRevealing}
+              currentRowClassName={currentRowClass}
+            />
+          </div>
         </div>
+
         <Keyboard
           onChar={onChar}
           onDelete={onDelete}

@@ -1,7 +1,7 @@
-import { CharStatus } from '../../lib/statuses'
 import classnames from 'classnames'
 import { REVEAL_TIME_MS } from '../../constants/settings'
 import { getStoredIsHighContrastMode } from '../../lib/localStorage'
+import { CharStatus } from '../../lib/statuses'
 
 type Props = {
   value?: string
