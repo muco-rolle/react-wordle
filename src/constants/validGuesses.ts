@@ -1877,6 +1877,7 @@ export const VALID_GUESSES = [
   'twose',
   'twoye',
   'twoze',
+  'iyubu',
   'ubace',
   'ubage',
   'ubaha',
