@@ -109,6 +109,9 @@ export const StatsModal = ({
           <p className="text-m font-bold leading-5 text-gray-500 dark:text-gray-400">
             {YOUR_SCORE_TEXT}: {gameScore}
           </p>
+          <span className="text-xs">
+            (incuro wagerageje X imisegonda vyagufashe)
+          </span>
           {<RankingBar rankingStats={rankingStats} />}
         </>
       )}
